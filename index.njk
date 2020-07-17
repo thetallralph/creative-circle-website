@@ -1,14 +1,59 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Home
+  key: Accueil
   order: 1
 ---
 
-<h1>Latest 3 Posts</h1>
+  <section class="hero" style="background-image: url('/img/hero.png'); background-size: cover; background-position: center center;">
+    <div class="h-screen container flex items-center"> 
+      <h1 class="text-center text-6xl font-bold text-white mx-auto">Rejoins le Creative Circle</h1>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+    </div>
+  </section>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  <section class="py-16 bg-orange-100">
+    <div class="container flex items-center">
+      <div class="content">
+        <h1 class="text-3xl font-bold">Qui partagent leur expérience dans le domaine</h1>
+        <p class="mt-4">Tu pourras poser des préoccupations ou prendre facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
+      </div>
+      <div class="illustration">
+        <img class="ml-8" src="/img/banner1.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-orange-200">
+    <div class="container flex items-center flex-row-reverse	">
+      <div class="content">
+        <h1 class="text-3xl font-bold">Qui partagent leur expérience dans le domaine</h1>
+        <p class="mt-4">Tu pourras poser des préoccupations ou prendre facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
+      </div>
+      <div class="illustration">
+        <img class="ml-8" src="/img/banner1.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-orange-100">
+    <div class="container flex items-center ">
+      <div class="content">
+        <h1 class="text-3xl font-bold">Qui partagent leur expérience dans le domaine</h1>
+        <p class="mt-4">Tu pourras poser des préoccupations ou prendre facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
+      </div>
+      <div class="illustration">
+        <img class="ml-8" src="/img/banner1.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-orange-100">
+    <div class="container flex items-center ">
+      <div class=" mx-auto box-cta bg-orange-200 max-w-5xl p-8 flex flex-col items-center rounded">
+        <h1 class="text-3xl font-bold text-center">Ta place est parmi nous</h1>
+        <p class="mt-4 text-center">Si tu es comme nous, que tu aimes le Design et le partage, tu sais ce qu'il te reste à faire. On a hâte de t'accueillir.</p>
+        <a class="inline-block text-white font-bold mt-10 py-2 px-6 bg-orange-900 text-xl mx-auto" style="color: white;" href="#">Rejoin le Circle</a>
+      </div>
+    </div>
+  </section>
+
+
