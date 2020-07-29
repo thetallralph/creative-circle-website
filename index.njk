@@ -4,56 +4,269 @@ eleventyNavigation:
   key: Accueil
   order: 1
 ---
+  <header class="bg-bluecc">
+    <div class="container pt-12 pt-6 flex justify-between items-center">
+      <div class="logo">
+        <img src="/img/logo-white.svg" alt="Creative Circle white logo">
+      </div>
+      <div class="main-menu">
+          <div>       
+            {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+            <ul class="nav flex">
+            {%- for entry in collections.all | eleventyNavigation %}
+              <li class="text-xl nav-items text-white mr-6"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+            {%- endfor %}
+            </ul> 
+          </div>
+      </div>
 
-  <section class="hero" style="background-image: url('/img/hero.png'); background-size: cover; background-position: center center;">
-    <div class="h-screen container flex items-center"> 
-      <h1 class="text-center text-6xl font-bold text-white mx-auto">Rejoins le Creative Circle</h1>
+    </div>
+  </header>
+
+  <section class=" bg-bluecc pt-16 items-bottom">
+    <div class="hero container pt-4 flex content-end items-end justify-between"> 
+      <div class="content-left self-center pb-12">
+        <h1 class="text-5xl text-white mx-auto mr-8" style="width: 530px;">Une communauté forte de designers africains pour booster ta carrière</h1>
+        <p class="mt-4 text-xl"><span class="scroll-animation">😎 </span>Vas-y défile</p>
+      </div>
+      <div class="content-right relative">
+        <svg class="marker-event-hero-display absolute -ml-12" style="bottom:0px;" width="542" height="131" viewBox="0 0 542 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 130.09L39.0598 88.4464C91.9906 32.0146 165.913 2.48871e-06 243.283 6.87553e-06L542 2.38124e-05V130.09H0Z" fill="#FA744F"/>
+        </svg>
+        <div class="event-hero-display"  style="width: 420px; z-index:25;">
+          <img class="text-right -mb-12" style="z-index:20;" src="/img/event-hero-display.png" alt="">
+            
+        </div>
+
+      </div>
+      
 
     </div>
   </section>
 
-  <section class="py-16 bg-orange-100">
-    <div class="container flex items-center">
-      <div class="content">
-        <h1 class="text-3xl font-bold">Qui partagent leur expérience dans le domaine</h1>
-        <p class="mt-4">Tu pourras poser des préoccupations ou prendre facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
-      </div>
-      <div class="illustration">
-        <img class="ml-8" src="/img/banner1.png" alt="">
+  <section class="intro py-16 bg-orange-100">
+    <div class="container">
+      <div class="intro-content mx-auto">
+        <p class="mt-4 text-4xl">Tu pourras poser des préoccupations ou prendre facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
+        <p class="mt-12"><span class="font-bold">Ralph, Naël et Olafèmi</span> du Creative Circle</p>
       </div>
     </div>
+
   </section>
-  <section class="py-16 bg-orange-200">
-    <div class="container flex items-center flex-row-reverse	">
-      <div class="content">
-        <h1 class="text-3xl font-bold">Qui partagent leur expérience dans le domaine</h1>
-        <p class="mt-4">Tu pourras poser des préoccupations ou prendre facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
+
+  <section class="py-16">
+    <div class="container">
+      <h1 class="text-4xl font-bold">Les Creative Circle Talks</h1>
+      <p class="mt-4 max-w-6xl">Le Creative Circle est un groupe de passionnés de design, à travers plusieurs pays d'Afrique</p>
+      
+      <div class="recent-talks mt-20">
+        <p class="text-2xl">Talk recents</p>
+        <div class="flex mt-10 items-start justify-between">
+          <div class="talk-item mr-4">
+            <p class="font-bold">Talk #1, <span class="talk-item-date">12 Janvier 2020</span></p>
+            <p class="talk-item-title mt-4 text-4xl">
+              Comment présenter son design à un client ?
+            </p>
+            <p class="talk-item-author text-xl mt-4">by Ralph G.</p>
+            <div class="talk-item-cta mt-6">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11.4372" cy="11.4372" r="10.4372" stroke="#FA744F" stroke-width="2"/>
+                <path d="M9.00586 16.5366L13.8713 11.6712L9.00586 6.80582" stroke="#FA744F" stroke-width="2.54159"/>
+              </svg>                
+            </div>
+          </div>
+          <div class="talk-item mr-4">
+            <p class="font-bold">Talk #1, <span class="talk-item-date">12 Janvier 2020</span></p>
+            <p class="talk-item-title mt-4 text-4xl">
+              Comment présenter son design à un client ?
+            </p>
+            <p class="talk-item-author text-xl mt-4">by Ralph G.</p>
+            <div class="talk-item-cta mt-6">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11.4372" cy="11.4372" r="10.4372" stroke="#FA744F" stroke-width="2"/>
+                <path d="M9.00586 16.5366L13.8713 11.6712L9.00586 6.80582" stroke="#FA744F" stroke-width="2.54159"/>
+              </svg>                
+            </div>
+          </div>
+          <div class="talk-item mr-4">
+            <p class="font-bold">Talk #1, <span class="talk-item-date">12 Janvier 2020</span></p>
+            <p class="talk-item-title mt-4 text-4xl">
+              Comment présenter son design à un client ?
+            </p>
+            <p class="talk-item-author text-xl mt-4">by Ralph G.</p>
+            <div class="talk-item-cta mt-6">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11.4372" cy="11.4372" r="10.4372" stroke="#FA744F" stroke-width="2"/>
+                <path d="M9.00586 16.5366L13.8713 11.6712L9.00586 6.80582" stroke="#FA744F" stroke-width="2.54159"/>
+              </svg>                
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="illustration">
-        <img class="ml-8" src="/img/banner1.png" alt="">
-      </div>
+
+      <p class="recent-talks-cta text-2xl mt-8">Voir tous les talks</p>
+
     </div>
   </section>
 
-  <section class="py-16 bg-orange-100">
-    <div class="container flex items-center ">
-      <div class="content">
-        <h1 class="text-3xl font-bold">Qui partagent leur expérience dans le domaine</h1>
-        <p class="mt-4">Tu pourras poser des préoccupations ou prendre facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
-      </div>
-      <div class="illustration">
-        <img class="ml-8" src="/img/banner1.png" alt="">
+  <section class="social-proof py-16 bg-orange-100">
+    <div class="container">
+      <div class="social-proof-content mx-auto">
+        <p class="mt-4 text-5xl">“Le Creative Circle me permet de faire ci ça et ça. J’ai appris beaucoup de ça et ceci aussi”</p>
+        <p class="text-lg mt-12"><span class="font-bold">Johna Djossou</span> | Designer at Google Africa</p>
       </div>
     </div>
+
   </section>
-  <section class="py-16 bg-orange-100">
-    <div class="container flex items-center ">
-      <div class=" mx-auto box-cta bg-orange-200 max-w-5xl p-8 flex flex-col items-center rounded">
-        <h1 class="text-3xl font-bold text-center">Ta place est parmi nous</h1>
-        <p class="mt-4 text-center">Si tu es comme nous, que tu aimes le Design et le partage, tu sais ce qu'il te reste à faire. On a hâte de t'accueillir.</p>
-        <a class="inline-block text-white font-bold mt-10 py-2 px-6 bg-orange-900 text-xl mx-auto" style="color: white;" href="#">Rejoin le Circle</a>
+
+  <section class="py-16">
+    <div class="container">
+      <h1 class="text-4xl font-bold">Le groupe slack</h1>
+      <p class="text-2xl mt-4 max-w-6xl">Dans le groupe slack, nous partageons au quotidien nos expériences, des opportunités, des conseils.</p>
+      <div class="mt-12 flex justify-between">
+        <div class="slack-benefits">
+          <div class="slack-benefit-item mb-8">
+            <p class="text-2xl font-bold">Pose des questions</p>
+            <p class="text-lg mt-2">Pose tes préoccupations ou prend facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
+          </div>
+          <div class="slack-benefit-item mb-8">
+            <p class="text-2xl font-bold">Pose des questions</p>
+            <p class="text-lg mt-2">Pose tes préoccupations ou prend facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
+          </div>
+          <div class="slack-benefit-item mb-8">
+            <p class="text-2xl font-bold">Pose des questions</p>
+            <p class="text-lg mt-2">Pose tes préoccupations ou prend facilement l'avis d'autres designers sur des projets sur lesquels tu bosses.</p>
+          </div>
+        </div>
+        <div class="slack-illustration mt-16">
+            <img class="" style="max-width: 1480px;"  src="/img/slack-preview.png" alt="SLack Group Preview">
+        </div>
       </div>
+      
+
     </div>
   </section>
 
+  <section class="main-cta py-16 bg-bluecc">
+    <div class="container">
+      <div class="content flex items-center justify-between">
+        <div class="main-cta-content">
+          <h1 class="text-5xl">Rejoins le circle  aujourd’hui</h1>
+          <p class="text-3xl mt-4 max-w-6xl">Et profite de...</p>
+          <ul class="main-cta-benefit mt-2">
+            <li class="main-cta-benefit-item ">Participation exclusive au talk</li>
+            <li class="main-cta-benefit-item">Accès au Groupe slack</li>
+            <li class="main-cta-benefit-item">Offres d’emplois chaque semaine</li>
+          </ul>
+          <p class="text-3xl mt-4 max-w-6xl">à <span class="money-highlighter">0 FCFA</span> </p>
+          <p class="text-lg mt-12">*Nous travaillons sur une offre premium pour offrir encore plus de valeur. 
+            <a href="" class="underline">Serais-tu interessé par payer plus pour booster ta carrière?</a> 
+          </p>
+          
+        </div>
+    
+        <div class="main-cta-button">
+          <a href="" class="text-2xl font-bold bg-orangecc py-6 px-12 rounded">Rejoins-nous</a>
+        </div>
+      </div>
+      
+    </div>
 
+  </section>
+
+
+
+
+
+<style>
+  .intro {
+    background-color: #ECECEC;
+    min-height: 480px;
+  }
+  .intro-content {
+    max-width: 750px;
+
+  }
+
+
+  .social-proof {
+    background-color: #CBE4FF;
+    min-height: 420px;
+  }
+  .social-proof-content {
+    max-width: 100%;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+  .event-hero-display {
+    box-shadow: 0px 23px 38px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+  }
+
+  .talk-item {
+    max-width: 340px;
+  }
+
+  .slack-benefit-item {
+    max-width:420px ;
+  }
+  .main-cta-content {
+    max-width:420px ;
+  }
+  .slack-illustration {
+    width: 550px;
+    height: 500px;
+  }
+
+  .main-cta-benefit-item {
+    position: relative;
+    font-size: 20px;
+    padding: 5px ;
+    padding-left: 26px;
+
+
+  }
+  .main-cta-benefit-item::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("/img/bullet-checkmark-orange.svg");
+    position: absolute;
+    top:10px;
+    left: 0px;
+  }
+
+  .money-highlighter {
+    position: relative;
+    display: inline-block;
+  }
+
+  .money-highlighter::after {
+    content: "";
+    width: 110%;
+    height: 8px;
+    left: -5%;
+    bottom: -5px;
+    position: absolute;
+    border: solid 4px #FA744F;
+    border-top: solid 0px #FA744F;
+
+
+  }
+
+  .main-footer {
+    background: linear-gradient(180deg, rgba(237, 237, 237, 0) 0%, rgba(237, 237, 237, 0.364583) 70.83%, #EDEDED 100%);
+  }
+
+  .main-footer-content {
+    max-width: 680px;
+  }
+
+  .team-message-video {
+    min-width: 330px;
+  }
+  
+
+</style>
