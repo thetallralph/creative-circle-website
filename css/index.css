@@ -35,7 +35,65 @@
   border-color: var(--orangecc);
 }
 
+/* TYPOGRAPHY */
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: "Airbnb Cereal App";
+  font-size:20px;
+  color: var(--bluecc);
+}
+
+
+
+.text-small{
+ font-size: 0.5rem;
+}
+.text-3xm{
+ font-size: 0.7rem;
+}
+.text-2xm{
+ font-size: 0.8rem;
+}
+.text-xm{
+ font-size: 0.9rem;
+}
+
+.text-xl{
+ font-size: 1.25rem;
+}
+.text-2xl{
+ font-size: 1.5rem;
+}
+.text-3xl{
+ font-size: 1.75rem;
+}
+.text-big{
+ font-size: 2.5rem;
+}
+
+
+
+.font-xbold {
+  font-weight: 800;
+}
+.font-bold {
+  font-weight: 500;
+}
+
+
+
+body {
+  
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
 
 /*  */
 

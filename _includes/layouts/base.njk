@@ -14,7 +14,24 @@
 
   
     
+    <header class="bg-bluecc">
+    <div class="container pt-12 pt-6 flex justify-between items-center">
+      <div class="logo">
+        <img src="/img/logo-white.svg" alt="Creative Circle white logo">
+      </div>
+      <div class="main-menu">
+          <div>       
+            {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+            <ul class="nav flex ">
+            {%- for entry in collections.all | eleventyNavigation %}
+              <li class="nav-items text-white mr-6"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+            {%- endfor %}
+            </ul> 
+          </div>
+      </div>
 
+    </div>
+  </header>
     
 
     <main class="">
@@ -22,7 +39,7 @@
       {{ content | safe }}
     </main>
 
-    <footer class="main-footer py-20">
+    <footer class="main-footer h-screen flex items-center py-20">
       <div class="container">
         <div class="main-footer-content mx-auto flex items-center ">
           <div class="team-message-video" >
@@ -53,13 +70,7 @@
   </body>
 
 <style>
-  body {
-    min-height: 100vh;
-  }
-  .container {
-    max-width: 1200px;
-    margin: auto;
-  }
+
 
 </style>
 
